@@ -1,0 +1,28 @@
+{
+    "name": "syntax-vscode-ext",
+    "displayName": "FML Syntax",
+    "description": "Forms Markup Language Syntax Highlighting",
+    "version": "0.0.1",
+    "icon": "icon/icon.png",
+    "repository": "https://github.com/fmllang/syntax-vscode-ext.git",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.93.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "fml",
+            "aliases": ["fml"],
+            "extensions": [".fml"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "fml",
+            "scopeName": "form.fml",
+            "path": "./syntaxes/fml.tmLanguage.json"
+        }]
+    }
+}

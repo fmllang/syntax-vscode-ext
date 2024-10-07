@@ -1,0 +1,149 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "fml",
+	"patterns": [
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#attributes"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#boolean"
+		},
+		{
+			"include": "#quotes"
+		},
+		{
+			"include": "#markdown"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.fml",
+					"match": "\\b(if|while|for|return)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.fml",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fml",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.fml",
+			"begin": "//",
+			"end": "(\\r\\n|\\n|\\r)"
+		},
+		"attributes": {
+			"name": "entity.name.function.fml",
+			"begin": "\\(",
+			"end": "\\)",
+			"patterns": [
+				{
+					"name": "entity.other.attribute-name",
+					"match": "[a-zA-Z0-9]"
+				},
+				{
+					"name": "entity.other.attribute-value",
+					"match": "=\\b[a-zA-Z0-9]+\\b"
+				},
+				{
+					"name": "string.quoted.double.fml",
+					"match": "\"(?:[^\"\\\\]|\\\\.)*\""
+				}
+			]
+		},
+		"identifiers": {
+			"name": "entity.name.function.fml",
+			"match": "[a-zA-Z0-9]+"
+		},
+		"numbers": {
+			"name": "constant.numeric.fml",
+			"match": "\\b[0-9]+\\b"
+		},
+		"boolean": {
+			"name": "constant.language.boolean.fml",
+			"match": "\\b(true|false)\\b"
+		},
+		"markdown": {
+			"begin": "#{",
+			"end": "}#",
+			"patterns": [{
+				"name": "constant.language.markdown.fml",
+				"match": "[#](1-6)?[a-zA-Z0-9\\s]*"
+			},
+			{
+				"name": "entity.name.class.fml",
+				"match": "\\*\\*[a-zA-Z0-9\\s!@#$%^&*()_+-=']+\\*\\*"
+			},
+			{
+				"name": "entity.name.class.fml",
+				"match": "\\*[a-zA-Z0-9\\s!@#$%^&*()_+-=']+\\*"
+			},
+			{
+				"name": "entity.name.type.fml",
+				"match": "\\b__[a-zA-Z0-9\\s!@#$%^&*()_+-=']+__\\b"
+			},
+			{
+				"name": "entity.name.type.fml",
+				"match": "\\b_[a-zA-Z0-9\\s!@#$%^&*()_+-=']+_\\b"
+			},
+			{
+				"name": "entity.name.function.fml",
+				"match": "\\[.+\\]\\(.+\\)"
+			},
+			{
+				"name": "string.regexp.fml",
+				"match": "\\*\\s+.+"
+
+			},
+			{
+				"name": "string.regexp.fml",
+				"match": "\\d+\\.\\s+.+"
+				
+			},
+			{
+				"name": "variable.parameter.fml",
+				"match": ">\\s.+"
+			}
+		]},
+		"operators": {
+			"patterns": [{
+				"name": "keyword.operator.fml",
+				"match": "\\b(==|!=|<=|>=|<|>|&&|\\|\\||\\+|-|\\*|/|%|!|&|\\^|\\|)\\b"
+				}]
+		},
+		"quotes": {
+			"patterns": [{
+				"name": "comment.line.fml",
+				"match": "(\"|\\')"
+			}]
+		}
+			
+	},
+	"scopeName": "source.fml"
+}
