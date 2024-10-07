@@ -6,6 +6,7 @@
     "icon": "icon/icon.png",
     "repository": "https://github.com/fmllang/syntax-vscode-ext.git",
     "license": "MIT",
+    "publisher": "@fmllang",
     "engines": {
         "vscode": "^1.93.0"
     },
