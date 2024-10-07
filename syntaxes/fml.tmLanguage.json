@@ -124,7 +124,7 @@
 			{
 				"name": "string.regexp.fml",
 				"match": "\\d+\\.\\s+.+"
-				
+
 			},
 			{
 				"name": "variable.parameter.fml",
@@ -143,7 +143,7 @@
 				"match": "(\"|\\')"
 			}]
 		}
-			
+
 	},
-	"scopeName": "source.fml"
+	"scopeName": "form.fml"
 }

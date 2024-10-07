@@ -2,7 +2,5 @@
 
 All notable changes to the "fml" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
+## [initial release] - 2020-10-07
 
